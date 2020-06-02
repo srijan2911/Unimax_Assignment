@@ -1,32 +1,27 @@
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <div id="success" class="alert alert-success {{#if noMessage}}invisible{{/if}}">
-            {{ successMgs }}
+
+      <div class="col-sm-5 col-my-sm-5"> <!-- column 1 -->
+        <div class="thumbnail"> <!--  thumbnail 1  -->
+          <img src="https://scontent.fpnq7-1.fna.fbcdn.net/v/t1.0-0/p180x540/44699285_364447971027883_6831673155380051968_o.jpg?_nc_cat=105&_nc_sid=dd9801&_nc_ohc=I7LTDEBQobYAX9j3quW&_nc_ht=scontent.fpnq7-1.fna&_nc_tp=6&oh=6eebe6ad2c1e0212e1c530a871637122&oe=5EFD8A90" alt="chennai thumbnail"> <!-- image 1 -->
+          <div class="caption"> <!-- caption -->
+            <h3>Chennai Bank Auction</h3>
+            <p>Auction Property in Chennai</p>
+            <p><a href="#" class="btn btn-primary" role="button">Details</a> <!-- btn 1 -->
+              <a href="#" class="btn btn-default" role="button">Register for Auction</a></p>  <!-- btn 2 -->
+          </div>
         </div>
-    </div>
+      </div>
+	  
+      <div class="col-sm-5 col-my-sm-5"> <!-- column 2 -->
+        <div class="thumbnail"> <!-- thumbnail 2 -->
+          <img src="https://scontent.fpnq7-1.fna.fbcdn.net/v/t1.0-9/44769061_364448934361120_7803005109159329792_n.jpg?_nc_cat=103&_nc_sid=85a577&_nc_ohc=hu85ErizXLUAX-6KxSo&_nc_ht=scontent.fpnq7-1.fna&oh=bd7b7bb9bfcf83cf1873138e367b4fee&oe=5EFA329F" alt="BMC Auction thumbnail">  <!-- image 2 -->
+          <div class="caption">  <!-- caption -->
+            <h3>BMC Auction Property</h3>
+            <p>BMC to auction properties to recover property tax dues</p>
+            <p><a href="#" class="btn btn-primary" role="button">Details</a>   <!-- btn 1 -->
+              <a href="#" class="btn btn-default" role="button">Register for Auction</a></p>  <!-- btn 2 -->
+          </div>
+        </div>
+      </div>
+      
 </div>
-<!-- deals with the front page products -->
-{{# each products }}
-    <div class="row">
-        {{# each this}}<!-- here this signifies for each element in the chunk of size 3 -->
-            <div class="col-sm-6 col-md-4 main"><!-- refer this class from here https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_grid_stacked_to_hor&stacked=h -->
-                <div class="card thumbnail" style="width: 20rem;">
-                    <img class="card-img-top shop-image  img-fluid" src="{{ this.imagePath }}" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">{{ this.title }}</h4>
-                        <p class="card-text description">
-                            {{ this.description }}
-                        </p>
-                        <div class="clearfix">
-                            <div class="price pull-left">Rs. {{ this.price }}</div>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-raised btn-success pull-right"><!--when button clicked go to add to cart -->
-                                <i class="fa fa-plus" aria-hidden="true"></i> Add to shopping cart
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    {{/each}}
-    </div>
-{{/each}}
